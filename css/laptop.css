@@ -1,0 +1,45 @@
+@media (max-width: 1440px) {
+    body {
+        margin: 0 !important;
+    }
+    .navbar {
+        padding-left: 2rem;
+    }
+    .Ntitle {
+        font-size: 20px;
+    }
+    .Nb {
+        margin-bottom: 0px;
+        margin-top: 11px;
+    }
+    .Title {
+        font-size: 70px;
+        margin-top: 140px;
+    }
+    .Description1 {
+        font-size: 12px;
+    }
+    .Description2 {
+        font-size: 12px;
+    }
+    .Multibtn {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .Anime {
+        margin-bottom: 30px;
+    }
+    .border {
+        width: 115px;
+    }
+    .Theme {
+        right: 25px;
+    }
+    .footer {
+        margin-top: 6rem;
+        margin-left: 3rem;
+    }
+    .fdescription {
+        font-size: 10px;
+    }
+}

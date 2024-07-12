@@ -1,0 +1,383 @@
+/* Base */
+* {box-sizing: border-box}
+body {font-family: "Manrope", sans-serif; margin:0}
+.mySlides {display: none;}
+img {vertical-align: middle; border-radius: 20px; box-shadow: 10px 10px var(--box-shadow-color); height: 300px;}
+path {fill: var(--path-color);}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1750px;
+  position: relative;
+  margin: auto;
+  margin-top: 7rem;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: var(--text-color);
+  font-size: 18px;
+  font-weight: 500;
+  position: relative;
+  width: 100%;
+  margin-left: 50px;
+  width: 750px;
+  margin-top: 10px;
+}
+
+/* Number text (1/5) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 25px;
+  padding: 12px 16px;
+  position: absolute;
+  top: 0;
+}
+
+/* Text about anime name */
+.Stitle {
+    font-size: 50px;
+    margin-left: 50px;
+    position: relative;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+/* Text about time and share */
+.time {
+    font-size: 20px;
+    margin-left: 50px;
+    position: relative;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+/* Navbar */
+.navbar {
+    padding-left: 5rem;
+    padding-right: 5rem;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.Nbar {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+/* Navbar Title */
+.Ntitle {
+    font-size: 30px;
+    color: var(--text-color);
+    font-family: "Manrope", sans-serif;
+    margin-right: 30px;
+}
+
+/* Navbar buttons */
+.Nb {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 5px;
+}
+
+.Nbtn {
+    font-size: 20px;
+    font-family: "Manrope", sans-serif;
+    margin: .3em;
+    color: var(--text-color);
+}
+
+/* Theme button */
+.Theme {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-left: 20px;
+    position: absolute;
+    right: 80px;
+}
+
+.Ntheme {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: black;
+    width: 50px;
+    height: 50px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+}
+
+/* Anime videos */
+.NTP {
+  margin-left: 120px;
+  font-size: 30px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.animes {
+  display: flex;
+  justify-content: center;
+}
+
+.anime {
+  width: 210px;
+  height: 300px;
+  background-color: #0000000c;
+  border-radius: 10px;
+  box-shadow: 5px 5px var(--box-shadow-color);
+  margin: 1em;
+  margin-top: 30px;
+}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  background-color: var(--background-color);
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  transition: 0.3s;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #4083ff;
+  transition: 0.3s;
+  border-radius: 5px;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #4083ff;
+  transition: 0.3s;
+  border-radius: 5px;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border-top: none;
+  transition: 0.3;
+}
+
+.tablinks {
+  font-size: 20px;
+  color: var(--accent-color);
+  transition: 0.3;
+  margin: 0.2em;
+}
+
+/* Footer */
+.footer {
+  font-family: "Manrope", sans-serif;
+  margin-top: 8rem;
+  margin-left: 5rem;
+}
+
+.ftitle {
+  margin: 0;
+}
+
+.fdescription {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.border {
+  width: 115px;
+  height: 2px;
+  background: var(--border-color);
+}
+
+.Rivi {
+  display: flex;
+  margin-top: 10px;
+}
+
+.Made {
+  margin: 0;
+}
+
+.Arivi {
+  margin-left: 5px;
+  text-decoration: underline;
+}
+
+.Media {
+  display: flex;
+  flex-wrap: nowrap;
+  position: absolute;
+  right: 70px;
+}
+
+.Telegram {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+/* Change Theme */
+:root {
+    --background-color: #f5f5f5;
+    --text-color: #000000;
+    --accent-color: #000000;
+    --border-color: #000000;
+    --box-shadow-color: rgba(0, 0, 0, 0.575);
+    --path-color: #000000;
+}
+   
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: 0.3s;
+}
+   
+a {
+    color: var(--accent-color);
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+body.dark-theme {
+    --background-color: #222222;
+    --text-color: #ffffff;
+    --accent-color: #ffffff;
+    --border-color: #ffffff;
+    --box-shadow-color: #ffffff;
+    --path-color: #ffffff;
+    transition: 0.3s;
+}
+
+/* Preloader */
+.preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    /* фоновый цвет */
+    background: #f5f5f5;
+    z-index: 1001;
+}
+
+.preloader__image {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 70px;
+    height: 70px;
+    margin-top: -35px;
+    margin-left: -35px;
+    text-align: center;
+}
+
+.loaded_hiding .preloader {
+    transition: 0.3s opacity;
+    opacity: 0;
+}
+
+.loaded .preloader {
+    display: none;
+}
+
+.colorPre {
+    fill: #e0e0e0 !important;
+}
+
+.games {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.game {
+  font-family: "Manrope", sans-serif;
+  width: 200px;
+  padding: 12px 16px;
+  height: 150px;
+  background-color: #e0e0e0;
+  box-shadow: 5px 5px var(--box-shadow-color);
+  border-radius: 10px;
+  margin: 1em;
+}
+
+.gamename {
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: underline;
+  margin-bottom: 3px;
+}
+
+.minutes {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 3px;
+}
+
+.info {
+  font-size: 15px;
+  font-weight: 500;
+}
