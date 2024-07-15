@@ -1,9 +1,6 @@
 /* Base */
 body {
     margin: 0 !important;
-    overflow: hidden;
-    overflow-y: hidden;
-    overflow-x: hidden;
     cursor: url('https://r2.guns.lol/5e1f2bdb-3a89-4ea8-b05c-0bd5aec1bcfc.cur'), auto !important;
     font-family: "Manrope", sans-serif;
     background-color: var(--background-color);
