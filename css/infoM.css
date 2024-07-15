@@ -1,0 +1,24 @@
+@media (max-width: 1440px) {
+    .slideshow-container {
+        max-width: 1300px;
+    }
+    .Stitle {
+        font-size: 38px;
+        top: 100px;
+    }
+    .time {
+        top: 150px;
+    }
+    .text {
+        font-size: 14px;
+        top: 180px;
+        width: 600px;
+    }
+    .border {
+        width: 115px;
+    }
+    .anime {
+        width: 147px;
+        height: 210px;
+    }
+}

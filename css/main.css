@@ -1,19 +1,3 @@
-/* Base */
-body {
-    margin: 0 !important;
-    overflow: hidden;
-    overflow-y: hidden;
-    overflow-x: hidden;
-}
-
-a {
-    text-decoration: none;
-}
-
-path {
-    fill: var(--path-color);
-}
-
 /* Navbar */
 .navbar {
     padding-left: 5rem;
@@ -27,15 +11,11 @@ path {
     flex-wrap: nowrap;
 }
 
-/* Navbar Title */
 .Ntitle {
     font-size: 30px;
-    color: var(--text-color);
-    font-family: "Manrope", sans-serif;
     margin-right: 30px;
 }
 
-/* Navbar buttons */
 .Nb {
     margin-top: 30px;
     margin-bottom: 30px;
@@ -44,9 +24,7 @@ path {
 
 .Nbtn {
     font-size: 20px;
-    font-family: "Manrope", sans-serif;
     margin: .3em;
-    color: var(--text-color);
 }
 
 /* Theme button */
@@ -67,11 +45,8 @@ path {
 }
 
 /* Main */
-
 .Title {
     font-size: 105px;
-    color: var(--text-color);
-    font-family: "Manrope", sans-serif;
     display: flex;
     justify-content: center;
     margin: 0;
@@ -80,8 +55,6 @@ path {
 
 .Description1 {
     font-size: 18px;
-    color: var(--text-color);
-    font-family: "Manrope", sans-serif;
     display: flex;
     justify-content: center;
     margin: 0;
@@ -90,8 +63,6 @@ path {
 
 .Description2 {
     font-size: 18px;
-    color: var(--text-color);
-    font-family: "Manrope", sans-serif;
     display: flex;
     justify-content: center;
     margin: 0;
@@ -103,48 +74,46 @@ path {
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
-    font-family: "Manrope", sans-serif;
     font-size: 18px;
 }
 
-.Anime {
+.info {
     width: 200px;
     height: 100px;
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--color);
     border-radius: 20px;
     padding: 10px 10px;
     display: flex;
     justify-content: center;
     margin-right: 20px;
     transition: 0.3s;
-    box-shadow: 10px 10px var(--box-shadow-color);
+    box-shadow: 10px 10px var(--color);
 }
 
-.Manga {
+.security {
     width: 200px;
     height: 100px;
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--color);
     border-radius: 20px;
     padding: 10px 10px;
     display: flex;
     justify-content: center;
     transition: 0.3s;
-    box-shadow: 10px 10px var(--box-shadow-color);
+    box-shadow: 10px 10px var(--color);
 }
 
-.Anime:hover {
+.security:hover {
     position: relative;
     bottom: 10px;
 }
 
-.Manga:hover {
+.info:hover {
     position: relative;
     bottom: 10px;
 }
 
 /* Footer */
 .footer {
-    font-family: "Manrope", sans-serif;
     margin-top: 13rem;
     margin-left: 5rem;
 }
@@ -162,7 +131,8 @@ path {
 .border {
     width: 115px;
     height: 2px;
-    background: #000000;
+    background: var(--color);
+    transition: 0.3s;
 }
 
 .Rivi {
@@ -193,33 +163,37 @@ path {
 
 /* Change Theme */
 :root {
-    --background-color: #f5f5f5;
-    --text-color: #000000;
-    --accent-color: #000000;
-    --border-color: #000000;
-    --box-shadow-color: #000000;
-    --path-color: #000000;
-}
-   
-body {
-    background-color: var(--background-color);
-    color: var(--text-color);
-    transition: 0.3s;
-}
-   
-a {
-    color: var(--accent-color);
+    --background-color: #222222;
+    --color: #ffffff;
     transition: 0.3s;
 }
 
 body.dark-theme {
-    --background-color: #222222;
-    --text-color: #ffffff;
-    --accent-color: #ffffff;
-    --border-color: #ffffff;
-    --box-shadow-color: #ffffff;
-    --path-color: #ffffff;
+    --background-color: #f5f5f5;
+    --color: #000000;
     transition: 0.3s;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--color);
+    transition: 0.3s;
+    margin: 0 !important;
+    overflow: hidden;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    cursor: url('https://r2.guns.lol/5e1f2bdb-3a89-4ea8-b05c-0bd5aec1bcfc.cur'), auto !important;
+    font-family: "Manrope", sans-serif;
+}
+   
+a {
+    color: var(--color);
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+path {
+    fill: var(--color);
 }
 
 /* Preloader */
@@ -230,9 +204,8 @@ body.dark-theme {
     right: 0;
     bottom: 0;
     overflow: hidden;
-    /* фоновый цвет */
-    background: #f5f5f5;
-    z-index: 1001;
+    background: var(--background-color);
+    z-index: 100;
 }
 
 .preloader__image {
@@ -253,8 +226,4 @@ body.dark-theme {
 
 .loaded .preloader {
     display: none;
-}
-
-.colorPre {
-    fill: #e0e0e0 !important;
 }

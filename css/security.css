@@ -4,14 +4,11 @@ body {
     overflow: hidden;
     overflow-y: hidden;
     overflow-x: hidden;
-}
-
-a {
-    text-decoration: none;
-}
-
-path {
-    fill: var(--path-color);
+    cursor: url('https://r2.guns.lol/5e1f2bdb-3a89-4ea8-b05c-0bd5aec1bcfc.cur'), auto !important;
+    font-family: "Manrope", sans-serif;
+    background-color: var(--background-color);
+    color: var(--color);
+    transition: 0.3s;
 }
 
 /* Navbar */
@@ -31,7 +28,6 @@ path {
 .Ntitle {
     font-size: 30px;
     color: var(--text-color);
-    font-family: "Manrope", sans-serif;
     margin-right: 30px;
 }
 
@@ -44,7 +40,6 @@ path {
 
 .Nbtn {
     font-size: 20px;
-    font-family: "Manrope", sans-serif;
     margin: .3em;
     color: var(--text-color);
 }
@@ -68,33 +63,127 @@ path {
 
 /* Change Theme */
 :root {
-    --background-color: #f5f5f5;
-    --text-color: #000000;
-    --accent-color: #000000;
-    --border-color: #000000;
-    --box-shadow-color: #000000;
-    --path-color: #000000;
-}
-   
-body {
-    background-color: var(--background-color);
-    color: var(--text-color);
+    --background-color: #222222;
+    --color: #ffffff;
+    --main: #e5e5e5;
     transition: 0.3s;
 }
    
 a {
-    color: var(--accent-color);
+    color: var(--color);
+    text-decoration: none;
     transition: 0.3s;
 }
 
+path {
+    fill: var(--color) !important;
+}
+
 body.dark-theme {
-    --background-color: #222222;
-    --text-color: #ffffff;
-    --accent-color: #ffffff;
-    --border-color: #ffffff;
-    --box-shadow-color: #ffffff;
-    --path-color: #ffffff;
+    --background-color: #f5f5f5;
+    --color: #000000;
+    --main: #e5e5e5;
     transition: 0.3s;
+}
+
+/* Main learn */
+.learn_list {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.learn {
+    width: 700px;
+    height: 600px;
+    border: 1px solid var(--color);
+    background-color: var(--background-color);
+    box-shadow: 10px 10px var(--color);
+    border-radius: 20px;
+    padding: 0.5rem 2rem;
+}
+
+.title {
+    font-size: 30px;
+    color: var(--color);
+}
+
+.list {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.lesson1 {
+    width: 300px;
+    height: 140px;
+    border: 1px solid var(--color);
+    border-radius: 10px;
+    box-shadow: 5px 5px var(--color);
+    padding: 4px 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.lesson {
+    width: 300px;
+    height: 140px;
+    border: 1px solid var(--color);
+    border-radius: 10px;
+    box-shadow: 5px 5px var(--color);
+    padding: 4px 20px;
+}
+
+.name {
+    font-size: 20px;
+}
+
+/* Footer */
+.footer {
+    margin-top: 50px;
+    margin-left: 5rem;
+}
+
+.ftitle {
+    margin: 0;
+}
+
+.fdescription {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.border {
+    width: 115px;
+    height: 2px;
+    background: var(--color);
+    transition: 0.3s;
+}
+
+.Rivi {
+    display: flex;
+    margin-top: 10px;
+}
+
+.Made {
+    margin: 0;
+}
+
+.Arivi {
+    margin-left: 5px;
+    text-decoration: underline;
+}
+
+.Media {
+    display: flex;
+    flex-wrap: nowrap;
+    position: absolute;
+    right: 70px;
+}
+
+.Telegram {
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 /* Preloader */
@@ -106,7 +195,7 @@ body.dark-theme {
     bottom: 0;
     overflow: hidden;
     /* фоновый цвет */
-    background: #f5f5f5;
+    background: var(--background-color);
     z-index: 1001;
 }
 
@@ -131,5 +220,5 @@ body.dark-theme {
 }
 
 .colorPre {
-    fill: #e0e0e0 !important;
+    fill: var(--color) !important;
 }
