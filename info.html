@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Capital css -->
-    <link rel="stylesheet" href="css/info.css">
-    <!-- Adaptation css-->
-    <link rel="stylesheet" href="css/mobileA.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Title-->
-    <title>InPass - plays</title>
+    <title>Polarn - info</title>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
     <!-- Favicon -->
-    <link rel="icon" type="images/" sizes="32x32" href="images/favicon1.ico">
-    <link rel="icon" type="images/" sizes="16x16" href="images/favicon1.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/info.css">
+    <link rel="stylesheet" href="css/infoM.css">
 </head>
 <body>
-
 
     <!-- Preloader -->
     <div class="preloader">
@@ -27,14 +27,13 @@
       </svg>
     </div>
 
-
   <!-- Navbar -->
   <div class="block">
     <div class="navbar">
         <div class="Nbar">
-            <a href="index.html"><h2 class="Ntitle">InPass</h2></a>
-            <a href="pass.html" class="Nb"><h2 class="Nbtn">PassChecker</h2></a>
-            <a href="generate.html" class="Nb"><h2 class="Nbtn">GeneratePass</h2></a>
+            <a href="index.html"><h2 class="Ntitle">Polarn</h2></a>
+            <a href="main/pass.html" class="Nb"><h2 class="Nbtn">PassChecker</h2></a>
+            <a href="main/generate.html" class="Nb"><h2 class="Nbtn">GeneratePass</h2></a>
         </div>
         <div class="Theme">
             <button id="theme-toggle" class="Ntheme">
@@ -47,21 +46,17 @@
 
 
   <!-- Slider -->
-  <div class="slideshow-container">
-
+  <div class="container">
     <div class="mySlides fade">
       <div class="Stitle">Игры по информационной безопасности</div>
       <div class="time">Время на прочтение ⌚ 2 минуты</div>
       <div class="text">Информационная безопасность – это защита данных от неправомерного доступа и повреждений. Шифр Цезаря, один из старейших методов шифрования, заменяет каждую букву на другую с определенным сдвигом в алфавите. Существуют игры, которые помогают понять такие шифры и их значимость для безопасности в современном мире.</div>
     </div>
-    
   </div>
-
-
 
   <div class="games">
     <div class="game">
-      <a href="caesar.html"><div class="gamename">Цезарь</div></a>
+      <a href="main/caesar.html"><div class="gamename">Цезарь</div></a>
       <div class="minutes">⌚ 2 минуты</div>
       <div class="info">Попытайтесь отгадать ступень в шифре Цезаря.</div>
     </div>
@@ -87,10 +82,8 @@
     </div>
   </div>
 
-
-
 <footer class="footer">
-  <h2 class="ftitle">InPass</h2>
+  <h2 class="ftitle">Polarn</h2>
   <p class="fdescription">This website does not store files on its server. It only provides links 
       <br>
      to media content hosted on third-party resources.</p>
@@ -105,58 +98,26 @@
   </div>
 </footer>
 
-
 <!-- Slider script -->
 <script>
 var slideIndex = 0;
-var timer; // Переменная для хранения таймера
 
 showSlides();
-
-function plusSlides(n) {
-    clearTimeout(timer); // Очищаем предыдущий таймер
-    showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-    clearTimeout(timer); // Очищаем предыдущий таймер
-    showSlides(slideIndex = n);
-}
 
 function showSlides(n) {
     var i;
     var slides = document.getElementsByClassName("mySlides");
-    var dots = document.getElementsByClassName("dot");
 
-    // Проверяем, передан ли параметр n, если нет, увеличиваем slideIndex
+    // Проверяем, передан ли параметр n
     if (n === undefined) {
         slideIndex++;
     } else {
         slideIndex = n;
     }
 
-    // Проверяем, чтобы slideIndex не выходил за границы
-    if (slideIndex > slides.length) {
-        slideIndex = 1;
-    }
-    if (slideIndex < 1) {
-        slideIndex = slides.length;
-    }
-
-    // Скрываем все слайды и убираем класс 'active' у точек
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-
-    // Показываем текущий слайд и добавляем класс 'active' к соответствующей точке
+    // Показываем текущий слайд
     slides[slideIndex - 1].style.display = "block";
     dots[slideIndex - 1].className += " active";
-
-    // Устанавливаем новый таймер
-    timer = setTimeout(showSlides, 2000); // Change image every 2 seconds
 }
 </script>
 
@@ -176,30 +137,6 @@ function showSlides(n) {
   document.getElementById('theme-toggle').addEventListener('click', function () {
     document.body.classList.toggle('dark-theme');
   });
-</script>
-
-<!-- Tabs script -->
-<script>
-  function openCity(evt, cityName) {
-    // Declare all variables
-    var i, tabcontent, tablinks;
-
-    // Get all elements with class="tabcontent" and hide them
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
-
-    // Get all elements with class="tablinks" and remove the class "active"
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-
-    // Show the current tab, and add an "active" class to the button that opened the tab
-    document.getElementById(cityName).style.display = "block";
-    evt.currentTarget.className += " active";
-}
 </script>
 </body>
 </html>
