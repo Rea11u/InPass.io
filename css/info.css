@@ -8,10 +8,9 @@ img {vertical-align: middle; border-radius: 20px; box-shadow: 10px 10px var(--bo
   max-width: 1750px;
   position: relative;
   margin: auto;
-  margin-top: 7rem;
+  margin-top: 10rem;
 }
 
-/* Caption text */
 .text {
   font-size: 18px;
   font-weight: 500;
@@ -22,15 +21,13 @@ img {vertical-align: middle; border-radius: 20px; box-shadow: 10px 10px var(--bo
   margin-top: 10px;
 }
 
-/* Text about site */
 .Stitle {
-    font-size: 50px;
+    font-size: 40px;
     margin-left: 50px;
     position: relative;
     font-weight: 600;
 }
 
-/* Text about time */
 .time {
     font-size: 20px;
     margin-left: 50px;
@@ -86,82 +83,121 @@ img {vertical-align: middle; border-radius: 20px; box-shadow: 10px 10px var(--bo
     border-radius: 10px;
 }
 
+/* Games */
+.games {
+    display: flex;
+    margin-left: 100px;
+    margin-top: 40px;
+}
+
+.game {
+    width: 200px;
+    padding: 12px 16px;
+    height: 150px;
+    background-color: var(--background-color);
+    border: 1px solid var(--color);
+    box-shadow: 5px 5px var(--color);
+    border-radius: 10px;
+    margin: 1em;
+}
+
+.gamename {
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: underline;
+    margin-bottom: 3px;
+}
+
+.minutes {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 3px;
+}
+
+.info {
+    font-size: 15px;
+    font-weight: 500;
+}
+
 /* Footer */
 .footer {
-  margin-top: 8rem;
-  margin-left: 5rem;
+    margin-top: 10rem;
+    margin-left: 5rem;
 }
 
 .ftitle {
-  margin: 0;
+    margin: 0;
 }
 
 .fdescription {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  font-size: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 15px;
 }
 
 .border {
-  width: 115px;
-  height: 2px;
-  background: var(--color);
+    width: 115px;
+    height: 2px;
+    background: var(--color);
 }
 
 .Rivi {
-  display: flex;
-  margin-top: 10px;
+    display: flex;
+    margin-top: 10px;
 }
 
 .Made {
-  margin: 0;
+    margin: 0;
 }
 
 .Arivi {
-  margin-left: 5px;
-  text-decoration: underline;
+    margin-left: 5px;
+    text-decoration: underline;
 }
 
 .Media {
-  display: flex;
-  flex-wrap: nowrap;
-  position: absolute;
-  right: 70px;
+    display: flex;
+    flex-wrap: nowrap;
+    position: absolute;
+    right: 70px;
 }
 
 .Telegram {
-  margin-left: 5px;
-  margin-right: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 /* Change Theme */
 :root {
-  --background-color: #222222;
-  --color: #ffffff;
-  transition: 0.3s;
+    --background-color: #222222;
+    --color: #ffffff;
+    transition: 0.3s;
 }
 
 body.dark-theme {
-  --background-color: #f5f5f5;
-  --color: #000000;
+    --background-color: #f5f5f5;
+    --color: #000000;
     transition: 0.3s;
 }
 
 path {fill: var(--color);}
 
 body {
-  background-color: var(--background-color);
-  color: var(--color);
-  transition: 0.3s;
-  font-family: "Manrope", sans-serif;
-  margin: 0;
-  cursor: url('https://r2.guns.lol/5e1f2bdb-3a89-4ea8-b05c-0bd5aec1bcfc.cur'), auto !important;
+    background-color: var(--background-color);
+    color: var(--color);
+    transition: 0.3s;
+    font-family: "Manrope", sans-serif;
+    margin: 0;
+    cursor: url('https://r2.guns.lol/5e1f2bdb-3a89-4ea8-b05c-0bd5aec1bcfc.cur'), auto !important;
+    overflow: hidden;
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
  
 a {
-  color: var(--color);
-  transition: 0.3s;
-  text-decoration: none;
+    color: var(--color);
+    transition: 0.3s;
+    text-decoration: none;
 }
 
 /* Preloader */
@@ -196,38 +232,20 @@ a {
     display: none;
 }
 
-.games {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: center;
-  margin-top: 40px;
+.main {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 200px;
+    margin-top: 200px;
 }
 
-.game {
-  width: 200px;
-  padding: 12px 16px;
-  height: 150px;
-  background-color: var(--background-color);
-  border: 1px solid var(--color);
-  box-shadow: 5px 5px var(--color);
-  border-radius: 10px;
-  margin: 1em;
+.download {
+    display: flex;
+    flex-direction: column;
 }
 
-.gamename {
-  font-size: 20px;
-  font-weight: 600;
-  text-decoration: underline;
-  margin-bottom: 3px;
-}
-
-.minutes {
-  font-size: 20px;
-  font-weight: 500;
-  margin-bottom: 3px;
-}
-
-.info {
-  font-size: 15px;
-  font-weight: 500;
+.sites {
+    display: flex;
+    flex-direction: column;
 }
