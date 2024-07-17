@@ -189,7 +189,7 @@
         padding-left: 2rem;
     }
     .Ntitle {
-        font-size: 20px;
+        font-size: 24px;
     }
     .Nb {
         margin-bottom: 0px;
@@ -220,5 +220,8 @@
     }
     .fdescription {
         font-size: 10px;
+    }
+    .Mbtn {
+        margin-top: 20px;
     }
 }
