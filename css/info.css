@@ -5,20 +5,29 @@ img {vertical-align: middle; border-radius: 20px; box-shadow: 10px 10px var(--bo
 
 /* Container */
 .container {
-  max-width: 1750px;
-  position: relative;
-  margin: auto;
-  margin-top: 10rem;
+    max-width: 1750px;
+    position: relative;
+    margin: auto;
+    margin-top: 10rem;
 }
 
 .text {
-  font-size: 18px;
-  font-weight: 500;
-  position: relative;
-  width: 100%;
-  margin-left: 50px;
-  width: 750px;
-  margin-top: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    position: relative;
+    width: 100%;
+    margin-left: 50px;
+    width: 750px;
+    margin-top: 10px;
+}
+
+.textM {
+    font-size: 20px;
+    margin-left: 40px;
+    position: relative;
+    font-weight: 600;
+    margin-top: 10px;
+    display: none;
 }
 
 .Stitle {
@@ -71,10 +80,10 @@ img {vertical-align: middle; border-radius: 20px; box-shadow: 10px 10px var(--bo
     margin-left: 20px;
     position: absolute;
     right: 80px;
+    top: 20px;
 }
 
 .Ntheme {
-    margin-top: 30px;
     margin-bottom: 30px;
     color: black;
     width: 50px;
@@ -248,4 +257,20 @@ a {
 .sites {
     display: flex;
     flex-direction: column;
+}
+
+.sitesM {
+    display: flex;
+    flex-direction: column;
+    display: none;
+    margin-left: 40px;
+}
+
+.sitesM h1 {
+    margin-top: 70px;
+    margin-bottom: 10px;
+}
+
+.sitesM a {
+    margin: 0.3em;
 }
