@@ -20,10 +20,10 @@
 <body>
 
     <div class="container">
-        <h1>Игра Цезаря</h1>
+        <h1>Игра Виженера</h1>
         <p>Зашифрованное сообщение:</p>
         <p id="encryptedMessage"></p>
-        <input type="number" id="shift" placeholder="Введите сдвиг">
+        <input type="text" id="key" placeholder="Введите ключ">
         <button onclick="decryptMessage()">Расшифровать</button>
         <p>Ваше сообщение:</p>
         <p id="decryptedMessage"></p>
@@ -31,32 +31,36 @@
 
 <script>
 // Зашифрованное сообщение
-const encryptedMessage = "dtz fwj ymj gjxy";
+const encryptedMessage = "zinff ehpdh";
 document.getElementById('encryptedMessage').innerText = encryptedMessage;
 
+// Алфавит для шифра
+const alphabet = "abcdefghijklmnopqrstuvwxyz";
+
+// Функция для расшифровки
 function decryptMessage() {
-    const shift = parseInt(document.getElementById('shift').value);
-    if (isNaN(shift)) {
-        console.log('Пожалуйста, введите действительное число для сдвига.');
+    const key = document.getElementById('key').value.toLowerCase();
+    if (!key) {
+        alert('Пожалуйста, введите ключ.');
         return;
     }
 
     let decryptedMessage = '';
+    let keyIndex = 0;
+
     for (let i = 0; i < encryptedMessage.length; i++) {
         const char = encryptedMessage[i];
         if (char.match(/[a-z]/i)) {
-            const code = encryptedMessage.charCodeAt(i);
-            let shiftedCode = code;
+            const charCode = alphabet.indexOf(char.toLowerCase());
+            const keyCode = alphabet.indexOf(key[keyIndex % key.length]);
+            let decryptedCharCode = (charCode - keyCode + alphabet.length) % alphabet.length;
 
-            // Для заглавных букв
-            if (code >= 65 && code <= 90) {
-                shiftedCode = ((code - 65 - shift + 26) % 26) + 65;
+            if (char === char.toUpperCase()) {
+                decryptedMessage += alphabet[decryptedCharCode].toUpperCase();
+            } else {
+                decryptedMessage += alphabet[decryptedCharCode];
             }
-            // Для строчных букв
-            else if (code >= 97 && code <= 122) {
-                shiftedCode = ((code - 97 - shift + 26) % 26) + 97;
-            }
-            decryptedMessage += String.fromCharCode(shiftedCode);
+            keyIndex++;
         } else {
             decryptedMessage += char;
         }
@@ -64,6 +68,6 @@ function decryptMessage() {
 
     document.getElementById('decryptedMessage').innerText = decryptedMessage;
 }
-    </script>
+</script>
 </body>
 </html>
